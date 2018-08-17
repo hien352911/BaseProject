@@ -35,8 +35,7 @@ extension Date {
         var dateString = ""
         if self.isToday {
             dateString = self.toFormat(Constant.Format.format1)
-        } else if (Date() - 1.weeks < self) &&
-            self < Date() {
+        } else if self.compareCloseTo(Date(), precision: 1.weeks.timeInterval) {
             dateString = self.toFormat(Constant.Format.format2)
         } else {
             dateString = self.toFormat(Constant.Format.format3)

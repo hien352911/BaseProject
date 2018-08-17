@@ -135,7 +135,10 @@
 				AA167E182109D05C00DD11B2 /* BaseViewController.swift */,
 				AAA8A68E2119AB9B00B7F907 /* ViewControllerTest.swift */,
 				AA167E162109D04D00DD11B2 /* Main.storyboard */,
-				AA5A725E2126B8F8000F0A43 /* Support Files */,
+				AA167DF92109CFEB00DD11B2 /* BaseProject-Bridging-Header.h */,
+				AA167DEE2109CFDC00DD11B2 /* Assets.xcassets */,
+				AA167DF02109CFDC00DD11B2 /* LaunchScreen.storyboard */,
+				AA167DF32109CFDC00DD11B2 /* Info.plist */,
 			);
 			path = BaseProject;
 			sourceTree = "<group>";
@@ -171,17 +174,6 @@
 				AA7837E521115D2D0023AB9F /* TableViewModel.swift */,
 			);
 			path = Swifter;
-			sourceTree = "<group>";
-		};
-		AA5A725E2126B8F8000F0A43 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				AA167DEE2109CFDC00DD11B2 /* Assets.xcassets */,
-				AA167DF02109CFDC00DD11B2 /* LaunchScreen.storyboard */,
-				AA167DF32109CFDC00DD11B2 /* Info.plist */,
-				AA167DF92109CFEB00DD11B2 /* BaseProject-Bridging-Header.h */,
-			);
-			path = "Support Files";
 			sourceTree = "<group>";
 		};
 		AA7837B32111598A0023AB9F /* Api */ = {
