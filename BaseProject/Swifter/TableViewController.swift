@@ -25,7 +25,7 @@ class TableViewController: UITableViewController {
             }
         }
         
-        print("2018-08-13 10:30:00".toDate()?.date.timeAgo())
+        print("27 Mar 2018 09:22".toDate()?.date.timeAgo())
     }
     
     func setupUI() {

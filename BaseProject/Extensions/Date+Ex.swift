@@ -11,10 +11,11 @@ import SwiftDate
 
 private struct Constant {
     struct Format {
+        // http://nsdateformatter.com
         static let format1 = "hh:mm a" // 5:10 AM, 10:54 PM
         static let format2 = "MMM dd, h:mm a" // Aug 16, 10:30 AM
         static let format3 = "MMM dd yyyy, h:mm a" // Aug 02 2018, 10:30 AM
-        static let format4 = ""
+        static let format4 = "dd MMM yyyy, h:mm a" // 02 Aug 2018, 10:30 AM
         static let format5 = ""
         static let format6 = ""
         static let format7 = ""
@@ -38,7 +39,7 @@ extension Date {
         } else if self.compareCloseTo(Date(), precision: 1.weeks.timeInterval) {
             dateString = self.toFormat(Constant.Format.format2)
         } else {
-            dateString = self.toFormat(Constant.Format.format3)
+            dateString = self.toFormat(Constant.Format.format4)
         }
         return dateString
     }

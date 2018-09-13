@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewControllerTest: UIViewController {
+class ViewControllerTest: BaseViewController {
     
     @IBAction func onTapDismiss(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)

@@ -19,4 +19,8 @@ class BaseViewController: UIViewController {
         navigationController?.navigationBar.backIndicatorTransitionMaskImage = #imageLiteral(resourceName: "ic_navbar_back")
         removeBackButtonTitle()
     }
+    
+    deinit {
+        print(NSStringFromClass(self.classForCoder) + "." + #function)
+    }
 }
