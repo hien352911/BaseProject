@@ -36,6 +36,7 @@
 		AA7837E421115CE50023AB9F /* GetWeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7837E321115CE50023AB9F /* GetWeatherService.swift */; };
 		AA7837E621115D2D0023AB9F /* TableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7837E521115D2D0023AB9F /* TableViewModel.swift */; };
 		AA93B6A32122BA9D00863204 /* Date+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA93B6A22122BA9D00863204 /* Date+Ex.swift */; };
+		AA9FBFDE214BA95B006001BE /* TSAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FBFDD214BA95B006001BE /* TSAsset.swift */; };
 		AAA8A68F2119AB9B00B7F907 /* ViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA8A68E2119AB9B00B7F907 /* ViewControllerTest.swift */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,7 @@
 		AA7837E321115CE50023AB9F /* GetWeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetWeatherService.swift; sourceTree = "<group>"; };
 		AA7837E521115D2D0023AB9F /* TableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModel.swift; sourceTree = "<group>"; };
 		AA93B6A22122BA9D00863204 /* Date+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ex.swift"; sourceTree = "<group>"; };
+		AA9FBFDD214BA95B006001BE /* TSAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSAsset.swift; sourceTree = "<group>"; };
 		AAA8A68E2119AB9B00B7F907 /* ViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTest.swift; sourceTree = "<group>"; };
 		D703586E9905C592750194A9 /* Pods-BaseProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaseProject/Pods-BaseProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,6 +131,7 @@
 			children = (
 				AA7837B32111598A0023AB9F /* Api */,
 				AA167E062109D03800DD11B2 /* Reachability */,
+				AA7837E7211160090023AB9F /* Helper */,
 				AA167DFD2109D03100DD11B2 /* Extensions */,
 				AA167E0B2109D04200DD11B2 /* Swifter */,
 				AA167DE72109CFD900DD11B2 /* AppDelegate.swift */,
@@ -179,7 +182,6 @@
 		AA7837B32111598A0023AB9F /* Api */ = {
 			isa = PBXGroup;
 			children = (
-				AA7837E7211160090023AB9F /* Helper */,
 				AA7837B42111598A0023AB9F /* Params */,
 				AA7837BB2111598A0023AB9F /* Error */,
 				AA7837C02111598A0023AB9F /* Services */,
@@ -222,6 +224,7 @@
 			children = (
 				AA167E072109D03800DD11B2 /* Utilities.swift */,
 				AA7837B1211155E60023AB9F /* WindowManager.swift */,
+				AA9FBFDD214BA95B006001BE /* TSAsset.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				AA7837CD2111598A0023AB9F /* PathEnum.swift in Sources */,
 				AA167DE82109CFD900DD11B2 /* AppDelegate.swift in Sources */,
 				AA7837D72111598A0023AB9F /* ApiService.swift in Sources */,
+				AA9FBFDE214BA95B006001BE /* TSAsset.swift in Sources */,
 				AA167E0A2109D03900DD11B2 /* ReachabilityViewController.swift in Sources */,
 				AA7837CE2111598A0023AB9F /* RequestParams.swift in Sources */,
 				AA7837B2211155E60023AB9F /* WindowManager.swift in Sources */,

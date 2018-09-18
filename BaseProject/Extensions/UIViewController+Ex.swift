@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Photos
 
 extension UIViewController {
     func removeBackButtonTitle() {
@@ -24,11 +25,19 @@ extension UIViewController {
 }
 
 extension UIViewController {
-    func saveImageToPhotosAlbum(image: UIImage, isShowAlert: Bool) {
-        if isShowAlert {
+    func saveImageToPhotosAlbum(image: UIImage, isShowAlertCompletionSaved: Bool, completionRequestSavePhoto: (() -> Void)? = nil) {
+        if isShowAlertCompletionSaved {
             UIImageWriteToSavedPhotosAlbum(image, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
         } else {
-            UIImageWriteToSavedPhotosAlbum(image, self, nil, nil)
+            PHPhotoLibrary.requestAuthorization { (authorizationStatus) in
+                switch authorizationStatus {
+                case .authorized:
+                    UIImageWriteToSavedPhotosAlbum(image, self, nil, nil)
+                default:
+                    break
+                }
+                completionRequestSavePhoto?()
+            }
         }
     }
     
