@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import IQKeyboardManagerSwift
+import INTULocationManager
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -202,8 +203,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     if let country = placemark?.country {
                         address += "\(country)"
                     }
-                    UserManager.shared.address = address
-                    NotificationCenter.default.post(name: NSNotification.Name("updateAddress"), object: nil, userInfo: ["address": UserManager.shared.address])
                 })
             }
         }
