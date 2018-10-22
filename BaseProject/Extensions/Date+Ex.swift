@@ -43,4 +43,41 @@ extension Date {
         }
         return dateString
     }
+    
+    /**
+     1m ago
+     1h ago
+     1d ago
+     1w ago
+     1M ago
+     1 year ago
+     */
+    public func displayTime() -> String {
+        let timeInterval = self.timeIntervalSince1970
+        var delta = abs(Date().timeIntervalSince1970 - timeInterval)
+        if delta < 60 {
+            delta = 60
+        }
+        let oneHour = Double(60 * 60)
+        
+        if delta < oneHour {
+            let minutes = Int(delta / 60)
+            return String(minutes) + " m"
+        } else if delta < 24 * oneHour {
+            let hours = Int(delta / 3600)
+            return String(hours) + " h"
+        } else if delta < 7 * 24 * oneHour {
+            let day = Int(delta / 3600 / 24)
+            return String(day) + " d"
+        } else if delta < 4 * 7 * 24 * oneHour {
+            let week = Int(delta / 86400 / 7)
+            return String(week) + " w"
+        } else if delta < 12 * 28 * 24 * oneHour {
+            let month = Int(delta / 86400 / 7 / 4)
+            return String(month) + " M"
+        } else {
+            let year = Int(delta / 86400 / 7 / 4 / 12)
+            return String(year) + " y"
+        }
+    }
 }

@@ -9,5 +9,11 @@
 import UIKit
 
 final class TableViewCell: UITableViewCell {
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet private weak var label: UILabel!
+}
+
+extension TableViewCell {
+    func updateWithWeather(_ weather: String) {
+        label.text = weather
+    }
 }

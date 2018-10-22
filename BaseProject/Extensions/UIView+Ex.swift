@@ -8,6 +8,13 @@
 
 import UIKit
 
+/**
+ layer.shadowColor = UIColor.black.cgColor
+ layer.shadowRadius = 12
+ layer.shadowOpacity = 0.15
+ layer.shadowOffset = CGSize(width: 0, height: 8)
+ */
+
 extension UIView {
     func roundView() {
         let minSize = min(bounds.width, bounds.height)

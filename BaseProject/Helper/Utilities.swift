@@ -41,4 +41,9 @@ class Utilities {
             }
         }
     }
+    
+    class var documentPath: String? {
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first
+        return paths
+    }
 }

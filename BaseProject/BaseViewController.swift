@@ -12,12 +12,11 @@ class BaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-
-    public func makeBackLeftBarButtonItem() {
-        navigationController?.navigationBar.backIndicatorImage = #imageLiteral(resourceName: "ic_navbar_back")
-        navigationController?.navigationBar.backIndicatorTransitionMaskImage = #imageLiteral(resourceName: "ic_navbar_back")
         removeBackButtonTitle()
+    }
+    
+    @objc open override func leftAction() {
+        
     }
     
     deinit {

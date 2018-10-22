@@ -23,6 +23,10 @@
 		AA167E152109D04200DD11B2 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA167E102109D04200DD11B2 /* TableViewController.swift */; };
 		AA167E172109D04D00DD11B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA167E162109D04D00DD11B2 /* Main.storyboard */; };
 		AA167E192109D05C00DD11B2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA167E182109D05C00DD11B2 /* BaseViewController.swift */; };
+		AA41388D2159E2D600082D90 /* FCM.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA41388B2159E2D600082D90 /* FCM.swift */; };
+		AA41388E2159E2D600082D90 /* PushNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA41388C2159E2D600082D90 /* PushNotificationService.swift */; };
+		AA4138E5215A3C6C00082D90 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4138E4215A3C6C00082D90 /* BaseTableViewController.swift */; };
+		AA4138E8215A3CBA00082D90 /* LeftMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4138E7215A3CBA00082D90 /* LeftMenuTableViewController.swift */; };
 		AA7837B2211155E60023AB9F /* WindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7837B1211155E60023AB9F /* WindowManager.swift */; };
 		AA7837CD2111598A0023AB9F /* PathEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7837B52111598A0023AB9F /* PathEnum.swift */; };
 		AA7837CE2111598A0023AB9F /* RequestParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7837B62111598A0023AB9F /* RequestParams.swift */; };
@@ -35,9 +39,13 @@
 		AA7837E221115C380023AB9F /* UIApplication+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7837E121115C380023AB9F /* UIApplication+Ex.swift */; };
 		AA7837E421115CE50023AB9F /* GetWeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7837E321115CE50023AB9F /* GetWeatherService.swift */; };
 		AA7837E621115D2D0023AB9F /* TableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7837E521115D2D0023AB9F /* TableViewModel.swift */; };
+		AA7D64F9215E0B1700FC5F95 /* UIColor+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7D64F8215E0B1700FC5F95 /* UIColor+Ex.swift */; };
+		AA7D64FD215E0EB800FC5F95 /* UINavigationBar+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7D64FC215E0EB800FC5F95 /* UINavigationBar+Ex.swift */; };
 		AA93B6A32122BA9D00863204 /* Date+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA93B6A22122BA9D00863204 /* Date+Ex.swift */; };
 		AA9FBFDE214BA95B006001BE /* TSAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FBFDD214BA95B006001BE /* TSAsset.swift */; };
 		AAA8A68F2119AB9B00B7F907 /* ViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA8A68E2119AB9B00B7F907 /* ViewControllerTest.swift */; };
+		AAD676AF2179BCBA00031BDA /* UIImage+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD676AE2179BCBA00031BDA /* UIImage+Ex.swift */; };
+		AADE7C11216C6C91009B3E7A /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADE7C10216C6C91009B3E7A /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +69,10 @@
 		AA167E102109D04200DD11B2 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		AA167E162109D04D00DD11B2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		AA167E182109D05C00DD11B2 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		AA41388B2159E2D600082D90 /* FCM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FCM.swift; sourceTree = "<group>"; };
+		AA41388C2159E2D600082D90 /* PushNotificationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationService.swift; sourceTree = "<group>"; };
+		AA4138E4215A3C6C00082D90 /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
+		AA4138E7215A3CBA00082D90 /* LeftMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuTableViewController.swift; sourceTree = "<group>"; };
 		AA7837B1211155E60023AB9F /* WindowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowManager.swift; sourceTree = "<group>"; };
 		AA7837B52111598A0023AB9F /* PathEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathEnum.swift; sourceTree = "<group>"; };
 		AA7837B62111598A0023AB9F /* RequestParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestParams.swift; sourceTree = "<group>"; };
@@ -73,9 +85,13 @@
 		AA7837E121115C380023AB9F /* UIApplication+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Ex.swift"; sourceTree = "<group>"; };
 		AA7837E321115CE50023AB9F /* GetWeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetWeatherService.swift; sourceTree = "<group>"; };
 		AA7837E521115D2D0023AB9F /* TableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModel.swift; sourceTree = "<group>"; };
+		AA7D64F8215E0B1700FC5F95 /* UIColor+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ex.swift"; sourceTree = "<group>"; };
+		AA7D64FC215E0EB800FC5F95 /* UINavigationBar+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Ex.swift"; sourceTree = "<group>"; };
 		AA93B6A22122BA9D00863204 /* Date+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ex.swift"; sourceTree = "<group>"; };
 		AA9FBFDD214BA95B006001BE /* TSAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSAsset.swift; sourceTree = "<group>"; };
 		AAA8A68E2119AB9B00B7F907 /* ViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTest.swift; sourceTree = "<group>"; };
+		AAD676AE2179BCBA00031BDA /* UIImage+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Ex.swift"; sourceTree = "<group>"; };
+		AADE7C10216C6C91009B3E7A /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		D703586E9905C592750194A9 /* Pods-BaseProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaseProject/Pods-BaseProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,6 +145,7 @@
 		AA167DE62109CFD900DD11B2 /* BaseProject */ = {
 			isa = PBXGroup;
 			children = (
+				AA4138E6215A3CA500082D90 /* SideMenu */,
 				AA7837B32111598A0023AB9F /* Api */,
 				AA167E062109D03800DD11B2 /* Reachability */,
 				AA7837E7211160090023AB9F /* Helper */,
@@ -136,6 +153,7 @@
 				AA167E0B2109D04200DD11B2 /* Swifter */,
 				AA167DE72109CFD900DD11B2 /* AppDelegate.swift */,
 				AA167E182109D05C00DD11B2 /* BaseViewController.swift */,
+				AA4138E4215A3C6C00082D90 /* BaseTableViewController.swift */,
 				AAA8A68E2119AB9B00B7F907 /* ViewControllerTest.swift */,
 				AA167E162109D04D00DD11B2 /* Main.storyboard */,
 				AA167DF92109CFEB00DD11B2 /* BaseProject-Bridging-Header.h */,
@@ -149,11 +167,14 @@
 		AA167DFD2109D03100DD11B2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				AA167DFE2109D03100DD11B2 /* UIView+Ex.swift */,
 				AA167DFF2109D03100DD11B2 /* UIViewController+Ex.swift */,
-				AA167E002109D03100DD11B2 /* NSObject+Ex.swift */,
+				AA7D64FC215E0EB800FC5F95 /* UINavigationBar+Ex.swift */,
+				AA167DFE2109D03100DD11B2 /* UIView+Ex.swift */,
+				AAD676AE2179BCBA00031BDA /* UIImage+Ex.swift */,
+				AA7D64F8215E0B1700FC5F95 /* UIColor+Ex.swift */,
 				AA7837E121115C380023AB9F /* UIApplication+Ex.swift */,
 				AA93B6A22122BA9D00863204 /* Date+Ex.swift */,
+				AA167E002109D03100DD11B2 /* NSObject+Ex.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -177,6 +198,23 @@
 				AA7837E521115D2D0023AB9F /* TableViewModel.swift */,
 			);
 			path = Swifter;
+			sourceTree = "<group>";
+		};
+		AA41388A2159E28800082D90 /* Push Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				AA41388B2159E2D600082D90 /* FCM.swift */,
+				AA41388C2159E2D600082D90 /* PushNotificationService.swift */,
+			);
+			path = "Push Notifications";
+			sourceTree = "<group>";
+		};
+		AA4138E6215A3CA500082D90 /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				AA4138E7215A3CBA00082D90 /* LeftMenuTableViewController.swift */,
+			);
+			path = SideMenu;
 			sourceTree = "<group>";
 		};
 		AA7837B32111598A0023AB9F /* Api */ = {
@@ -222,9 +260,11 @@
 		AA7837E7211160090023AB9F /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				AA41388A2159E28800082D90 /* Push Notifications */,
 				AA167E072109D03800DD11B2 /* Utilities.swift */,
 				AA7837B1211155E60023AB9F /* WindowManager.swift */,
 				AA9FBFDD214BA95B006001BE /* TSAsset.swift */,
+				AADE7C10216C6C91009B3E7A /* LocationManager.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -309,28 +349,42 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-BaseProject/Pods-BaseProject-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/INTULocationManager/INTULocationManager.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftDate/SwiftDate.framework",
 				"${BUILT_PRODUCTS_DIR}/SwifterSwift/SwifterSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/INTULocationManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftDate.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwifterSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -363,23 +417,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA167E122109D04200DD11B2 /* TableHeaderView.swift in Sources */,
+				AA4138E8215A3CBA00082D90 /* LeftMenuTableViewController.swift in Sources */,
 				AA7837D02111598A0023AB9F /* RequestBodyData.swift in Sources */,
 				AA167E032109D03200DD11B2 /* UIViewController+Ex.swift in Sources */,
+				AADE7C11216C6C91009B3E7A /* LocationManager.swift in Sources */,
 				AA167E092109D03900DD11B2 /* Utilities.swift in Sources */,
 				AA7837D22111598A0023AB9F /* Error+Extension.swift in Sources */,
 				AA167E042109D03200DD11B2 /* NSObject+Ex.swift in Sources */,
+				AA41388E2159E2D600082D90 /* PushNotificationService.swift in Sources */,
 				AA7837CF2111598A0023AB9F /* RequestFileBodyData.swift in Sources */,
 				AA7837D52111598A0023AB9F /* Encoding.swift in Sources */,
 				AA167E192109D05C00DD11B2 /* BaseViewController.swift in Sources */,
+				AAD676AF2179BCBA00031BDA /* UIImage+Ex.swift in Sources */,
+				AA4138E5215A3C6C00082D90 /* BaseTableViewController.swift in Sources */,
+				AA7D64F9215E0B1700FC5F95 /* UIColor+Ex.swift in Sources */,
 				AA167E132109D04200DD11B2 /* TableViewCell.swift in Sources */,
 				AAA8A68F2119AB9B00B7F907 /* ViewControllerTest.swift in Sources */,
 				AA167E152109D04200DD11B2 /* TableViewController.swift in Sources */,
+				AA41388D2159E2D600082D90 /* FCM.swift in Sources */,
 				AA7837E421115CE50023AB9F /* GetWeatherService.swift in Sources */,
 				AA167E022109D03200DD11B2 /* UIView+Ex.swift in Sources */,
 				AA93B6A32122BA9D00863204 /* Date+Ex.swift in Sources */,
 				AA7837D32111598A0023AB9F /* ErrorInfo.swift in Sources */,
 				AA7837E221115C380023AB9F /* UIApplication+Ex.swift in Sources */,
 				AA7837E621115D2D0023AB9F /* TableViewModel.swift in Sources */,
+				AA7D64FD215E0EB800FC5F95 /* UINavigationBar+Ex.swift in Sources */,
 				AA7837CD2111598A0023AB9F /* PathEnum.swift in Sources */,
 				AA167DE82109CFD900DD11B2 /* AppDelegate.swift in Sources */,
 				AA7837D72111598A0023AB9F /* ApiService.swift in Sources */,
@@ -525,7 +587,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z7YWS97UKQ;
 				INFOPLIST_FILE = BaseProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -546,7 +610,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z7YWS97UKQ;
 				INFOPLIST_FILE = BaseProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

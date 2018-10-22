@@ -10,7 +10,7 @@ import UIKit
 import Photos
 
 extension UIViewController {
-    func removeBackButtonTitle() {
+    public func removeBackButtonTitle() {
         if let topItem = self.navigationController?.navigationBar.topItem {
             topItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         }
@@ -18,7 +18,7 @@ extension UIViewController {
 }
 
 extension UIViewController {
-    func presentTransperant(_ viewControllerToPresent: UIViewController, animated: Bool, completion: (() -> Void)?) {
+    func presentTransperant(_ viewControllerToPresent: UIViewController, animated: Bool, completion: (() -> Void)? = nil) {
         viewControllerToPresent.modalPresentationStyle = .overCurrentContext
         present(viewControllerToPresent, animated: animated, completion: completion)
     }
@@ -118,5 +118,17 @@ extension UIViewController: UITextFieldDelegate {
     
     @objc func cancelPressed() {
         view.endEditing(true) // or do something
+    }
+}
+
+extension UIViewController {
+    public func addLeftBarButtonWithImage(buttonImage: UIImage, tintColor: UIColor? = UIColor(hex: 0xB4B4B4)) {
+        let leftButton = UIBarButtonItem(image: buttonImage, style: UIBarButtonItemStyle.plain, target: self, action: #selector(self.leftAction))
+        leftButton.tintColor = tintColor
+        navigationItem.leftBarButtonItem = leftButton
+    }
+    
+    @objc func leftAction() {
+        
     }
 }

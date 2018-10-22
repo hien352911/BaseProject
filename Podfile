@@ -7,13 +7,33 @@ target 'BaseProject' do
 
   # Pods for BaseProject
 pod 'Alamofire'
-pod 'Kingfisher'
-pod 'SwiftyJSON'
+pod 'SDWebImage'
 pod 'RxSwift'
 pod 'RxCocoa'
-pod 'IQKeyboardManager'
 pod 'NVActivityIndicatorView'
-pod 'SwifterSwift', '4.4.0'
+pod 'SwifterSwift'
 pod 'ReachabilitySwift'
 pod 'SwiftDate'
+#Keyboard
+pod 'IQKeyboardManagerSwift'
+#Database
+pod 'Realm'
+pod 'RealmSwift'
+#Firebase Push Notification
+pod 'Firebase/Core'
+pod 'Firebase/Messaging'
+#Parse Json
+pod 'ObjectMapper'
+#Side Menu
+pod 'SideMenu'
+#Map
+pod 'INTULocationManager'
+end
+
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        target.build_configurations.each do |config|
+            config.build_settings['SWIFT_VERSION'] = '4.0'
+        end
+    end
 end

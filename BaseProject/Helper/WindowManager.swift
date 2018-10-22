@@ -26,7 +26,7 @@ class WindowManager: NSObject {
         let window = UIWindow(frame: UIScreen.main.bounds)
         window.isOpaque = true
         window.rootViewController = self.progressController
-        window.rootViewController?.setupNavigationDefault()
+//        window.rootViewController?.setupNavigationDefault()
         window.rootViewController?.navigationController?.navigationBar.isTranslucent = true
         window.windowLevel = WindowManager.currentWindowLevel() + 0.1
         return window
@@ -53,6 +53,7 @@ class WindowManager: NSObject {
             self.progressWindow.isHidden = false
             let size = CGSize(width: 30, height: 30)
             let color = UIColor(hex: 0x720999)
+            self.progressController.view.backgroundColor = .red
             self.progressController.startAnimating(size,
                                                    message: "",
                                                    type: .ballPulse,
