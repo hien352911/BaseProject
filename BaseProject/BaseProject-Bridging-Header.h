@@ -5,3 +5,5 @@
 @import SwifterSwift;
 @import Realm;
 @import RealmSwift;
+
+#import "DhtBackgroundTaskManager.h"

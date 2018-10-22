@@ -30,6 +30,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        DhtBackgroundTaskManager.shared()?.endAllBackgroundTasks()
+        // Call func cần handle ở đây
+    }
+    
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        DhtBackgroundTaskManager.shared()?.beginNewBackgroundTask()
+        // Call func cần handle ở đây
+    }
+    
     //MARK: -remote notification
     func registerRemoteNotification() {
         PushNotificationService.shared.requestRemoteNotificationAuthorization()

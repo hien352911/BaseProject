@@ -41,6 +41,7 @@
 		AA7837E621115D2D0023AB9F /* TableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7837E521115D2D0023AB9F /* TableViewModel.swift */; };
 		AA7D64F9215E0B1700FC5F95 /* UIColor+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7D64F8215E0B1700FC5F95 /* UIColor+Ex.swift */; };
 		AA7D64FD215E0EB800FC5F95 /* UINavigationBar+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7D64FC215E0EB800FC5F95 /* UINavigationBar+Ex.swift */; };
+		AA829F77217DDD16007F889A /* DhtBackgroundTaskManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AA829F76217DDD16007F889A /* DhtBackgroundTaskManager.m */; };
 		AA93B6A32122BA9D00863204 /* Date+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA93B6A22122BA9D00863204 /* Date+Ex.swift */; };
 		AA9FBFDE214BA95B006001BE /* TSAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FBFDD214BA95B006001BE /* TSAsset.swift */; };
 		AAA8A68F2119AB9B00B7F907 /* ViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA8A68E2119AB9B00B7F907 /* ViewControllerTest.swift */; };
@@ -87,6 +88,8 @@
 		AA7837E521115D2D0023AB9F /* TableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModel.swift; sourceTree = "<group>"; };
 		AA7D64F8215E0B1700FC5F95 /* UIColor+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ex.swift"; sourceTree = "<group>"; };
 		AA7D64FC215E0EB800FC5F95 /* UINavigationBar+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Ex.swift"; sourceTree = "<group>"; };
+		AA829F75217DDD16007F889A /* DhtBackgroundTaskManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DhtBackgroundTaskManager.h; sourceTree = "<group>"; };
+		AA829F76217DDD16007F889A /* DhtBackgroundTaskManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DhtBackgroundTaskManager.m; sourceTree = "<group>"; };
 		AA93B6A22122BA9D00863204 /* Date+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ex.swift"; sourceTree = "<group>"; };
 		AA9FBFDD214BA95B006001BE /* TSAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSAsset.swift; sourceTree = "<group>"; };
 		AAA8A68E2119AB9B00B7F907 /* ViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTest.swift; sourceTree = "<group>"; };
@@ -265,6 +268,8 @@
 				AA7837B1211155E60023AB9F /* WindowManager.swift */,
 				AA9FBFDD214BA95B006001BE /* TSAsset.swift */,
 				AADE7C10216C6C91009B3E7A /* LocationManager.swift */,
+				AA829F75217DDD16007F889A /* DhtBackgroundTaskManager.h */,
+				AA829F76217DDD16007F889A /* DhtBackgroundTaskManager.m */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -304,6 +309,11 @@
 					AA167DE32109CFD900DD11B2 = {
 						CreatedOnToolsVersion = 9.4.1;
 						LastSwiftMigration = 0940;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -417,6 +427,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA167E122109D04200DD11B2 /* TableHeaderView.swift in Sources */,
+				AA829F77217DDD16007F889A /* DhtBackgroundTaskManager.m in Sources */,
 				AA4138E8215A3CBA00082D90 /* LeftMenuTableViewController.swift in Sources */,
 				AA7837D02111598A0023AB9F /* RequestBodyData.swift in Sources */,
 				AA167E032109D03200DD11B2 /* UIViewController+Ex.swift in Sources */,
