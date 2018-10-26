@@ -64,9 +64,9 @@ class PushNotificationService: NSObject {
     
     func processContentOfRemoteNotification(_ payload: [AnyHashable: Any], isoffline: Bool) {
         print(payload)
-        
         let alert = UIAlertController(title: "", message: payload.description, preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        
     }
 
     /*
@@ -95,5 +95,6 @@ extension PushNotificationService: UNUserNotificationCenterDelegate {
         let userInfo = response.notification.request.content.userInfo
         self.didReceiveRemoteNotification(userInfo: userInfo)
         completionHandler()
+        
     }
 }

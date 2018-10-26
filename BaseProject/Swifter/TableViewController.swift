@@ -13,24 +13,15 @@ class TableViewController: BaseTableViewController {
     
     // MARK: - Properties
     private let viewModel = TableViewModel()
-    private var weathers: [String] = []
 
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         WindowManager.shared.showProgressView()
-        viewModel.getWeathers { (response, error) in
-            WindowManager.shared.hideProgressView()
-            if let response = response as? [String] {
-                self.weathers = response
-                self.tableView.reloadData()
-            }
-        }
         addSideMenu()
+        getStudents(isLoadmore: false)
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Current Location", style: .plain, target: self, action: #selector(getCurrentLocation))
-        
-        print("27 Mar 2018 09:22".toDate()?.date.timeAgo())
     }
     
     // MARK: - Override Methods
@@ -62,8 +53,23 @@ class TableViewController: BaseTableViewController {
     }
     
     func setupUI() {
+        tableView.es.addPullToRefresh { [weak self] in
+            self?.getStudents(isLoadmore: false)
+            self?.tableView.es.stopPullToRefresh()
+        }
+        tableView.es.addInfiniteScrolling { [weak self] in
+            self?.getStudents(isLoadmore: true)
+            self?.tableView.es.stopLoadingMore()
+        }
         tableView.register(nibWithCellClass: TableViewCell.self)
         tableView.rowHeight = 60
+        tableView.tableFooterView = UIView()
+    }
+    
+    func getStudents(isLoadmore: Bool) {
+        viewModel.getWeathers(isLoadmore: isLoadmore) { [weak self] in
+            self?.tableView.reloadData()
+        }
     }
     
     private func scoopCellAtIndexPath(indexPath: IndexPath) -> UITableViewCell {
@@ -74,14 +80,14 @@ class TableViewController: BaseTableViewController {
     }
     
     private func configureScoopCell(cell: TableViewCell, atIndexPath indexPath: IndexPath) {
-        let weather = weathers[indexPath.row]
+        let weather = viewModel.students[indexPath.row].name
         cell.updateWithWeather(weather)
     }
 }
 
 extension TableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return weathers.count
+        return viewModel.students.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

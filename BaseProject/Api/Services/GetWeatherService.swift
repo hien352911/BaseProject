@@ -10,18 +10,19 @@ import Foundation
 
 class GetWeatherService: ApiService {
     override func onFinish(_ response: Any?, statusCode: Int, error: ErrorInfo?, completion: NetworkServiceCompletion?) {
-        var summarys: [String] = []
+        if let error = error {
+            print(error.description)
+        }
+        var students: [Student] = []
         if let response = response as? [String: Any] {
-            if let hourly = response["hourly"] as? [String: Any] {
-                if let data = hourly["data"] as? [[String: Any]] {
-                    for dict in data {
-                        if let summary = dict["summary"] as? String {
-                            summarys.append(summary)
-                        }
+            if let data = response["data"] as? [[String: Any]] {
+                for dict in data {
+                    if let student = Student(JSON: dict) {
+                        students.append(student)
                     }
                 }
             }
         }
-        super.onFinish(summarys, statusCode: statusCode, error: error, completion: completion)
+        super.onFinish(students, statusCode: statusCode, error: error, completion: completion)
     }
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-let rootURL = "https://api.darksky.net/forecast/41cd0425a6fadf7a97e633f522f148dd/37.8267,-122.4233"
+let rootURL = "http://www.mocky.io/v2/5bd296f33400007000cfddc7"
 
 enum Path {
     case getWeathers

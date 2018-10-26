@@ -19,6 +19,10 @@ class BaseViewController: UIViewController {
         
     }
     
+    func setupUI() {}
+    
+    func setupObservable() {}
+    
     deinit {
         print(NSStringFromClass(self.classForCoder) + "." + #function)
     }

@@ -132,3 +132,30 @@ extension UIViewController {
         
     }
 }
+
+extension UIViewController {
+    public class func topMostViewController() -> UIViewController? {
+        let keyWindow = UIApplication.shared.keyWindow
+        return UIViewController.topViewControllerWithRootController(keyWindow?.rootViewController)
+    }
+    
+    public class func topViewControllerWithRootController(_ root: UIViewController?) -> UIViewController? {
+        guard let rootController = root else {
+            return nil
+        }
+        if let tabbarController = rootController as? UITabBarController {
+            return UIViewController.topViewControllerWithRootController(tabbarController.selectedViewController)
+        } else if let naviagationController = rootController as? UINavigationController {
+            return UIViewController.topViewControllerWithRootController(naviagationController.visibleViewController)
+        } else if let presentedController = rootController.presentedViewController {
+            return UIViewController.topViewControllerWithRootController(presentedController)
+        } else {
+            for view in rootController.view.subviews {
+                if let controller = view.next as? UIViewController {
+                    return UIViewController.topViewControllerWithRootController(controller)
+                }
+            }
+        }
+        return root
+    }
+}
