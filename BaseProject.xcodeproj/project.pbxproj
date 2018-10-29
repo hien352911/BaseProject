@@ -23,10 +23,10 @@
 		AA167E152109D04200DD11B2 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA167E102109D04200DD11B2 /* TableViewController.swift */; };
 		AA167E172109D04D00DD11B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA167E162109D04D00DD11B2 /* Main.storyboard */; };
 		AA167E192109D05C00DD11B2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA167E182109D05C00DD11B2 /* BaseViewController.swift */; };
-		AA41388D2159E2D600082D90 /* FCM.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA41388B2159E2D600082D90 /* FCM.swift */; };
-		AA41388E2159E2D600082D90 /* PushNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA41388C2159E2D600082D90 /* PushNotificationService.swift */; };
 		AA4138E5215A3C6C00082D90 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4138E4215A3C6C00082D90 /* BaseTableViewController.swift */; };
 		AA4138E8215A3CBA00082D90 /* LeftMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4138E7215A3CBA00082D90 /* LeftMenuTableViewController.swift */; };
+		AA6765422186E1F0002CACF4 /* PushNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6765402186E1F0002CACF4 /* PushNotificationService.swift */; };
+		AA6765432186E1F0002CACF4 /* FCM.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6765412186E1F0002CACF4 /* FCM.swift */; };
 		AA7837B2211155E60023AB9F /* WindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7837B1211155E60023AB9F /* WindowManager.swift */; };
 		AA7837CD2111598A0023AB9F /* PathEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7837B52111598A0023AB9F /* PathEnum.swift */; };
 		AA7837CE2111598A0023AB9F /* RequestParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7837B62111598A0023AB9F /* RequestParams.swift */; };
@@ -73,10 +73,10 @@
 		AA167E102109D04200DD11B2 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		AA167E162109D04D00DD11B2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		AA167E182109D05C00DD11B2 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		AA41388B2159E2D600082D90 /* FCM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FCM.swift; sourceTree = "<group>"; };
-		AA41388C2159E2D600082D90 /* PushNotificationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationService.swift; sourceTree = "<group>"; };
 		AA4138E4215A3C6C00082D90 /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		AA4138E7215A3CBA00082D90 /* LeftMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuTableViewController.swift; sourceTree = "<group>"; };
+		AA6765402186E1F0002CACF4 /* PushNotificationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationService.swift; sourceTree = "<group>"; };
+		AA6765412186E1F0002CACF4 /* FCM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FCM.swift; sourceTree = "<group>"; };
 		AA7837B1211155E60023AB9F /* WindowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowManager.swift; sourceTree = "<group>"; };
 		AA7837B52111598A0023AB9F /* PathEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathEnum.swift; sourceTree = "<group>"; };
 		AA7837B62111598A0023AB9F /* RequestParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestParams.swift; sourceTree = "<group>"; };
@@ -209,21 +209,21 @@
 			path = Swifter;
 			sourceTree = "<group>";
 		};
-		AA41388A2159E28800082D90 /* Push Notifications */ = {
-			isa = PBXGroup;
-			children = (
-				AA41388B2159E2D600082D90 /* FCM.swift */,
-				AA41388C2159E2D600082D90 /* PushNotificationService.swift */,
-			);
-			path = "Push Notifications";
-			sourceTree = "<group>";
-		};
 		AA4138E6215A3CA500082D90 /* SideMenu */ = {
 			isa = PBXGroup;
 			children = (
 				AA4138E7215A3CBA00082D90 /* LeftMenuTableViewController.swift */,
 			);
 			path = SideMenu;
+			sourceTree = "<group>";
+		};
+		AA67653F2186E1F0002CACF4 /* Push Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				AA6765402186E1F0002CACF4 /* PushNotificationService.swift */,
+				AA6765412186E1F0002CACF4 /* FCM.swift */,
+			);
+			path = "Push Notifications";
 			sourceTree = "<group>";
 		};
 		AA7837B32111598A0023AB9F /* Api */ = {
@@ -269,7 +269,7 @@
 		AA7837E7211160090023AB9F /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				AA41388A2159E28800082D90 /* Push Notifications */,
+				AA67653F2186E1F0002CACF4 /* Push Notifications */,
 				AA167E072109D03800DD11B2 /* Utilities.swift */,
 				AA7837B1211155E60023AB9F /* WindowManager.swift */,
 				AA9FBFDD214BA95B006001BE /* TSAsset.swift */,
@@ -462,7 +462,6 @@
 				AA167E092109D03900DD11B2 /* Utilities.swift in Sources */,
 				AA7837D22111598A0023AB9F /* Error+Extension.swift in Sources */,
 				AA167E042109D03200DD11B2 /* NSObject+Ex.swift in Sources */,
-				AA41388E2159E2D600082D90 /* PushNotificationService.swift in Sources */,
 				AA7837CF2111598A0023AB9F /* RequestFileBodyData.swift in Sources */,
 				AA7837D52111598A0023AB9F /* Encoding.swift in Sources */,
 				AA167E192109D05C00DD11B2 /* BaseViewController.swift in Sources */,
@@ -473,12 +472,13 @@
 				AAA8A68F2119AB9B00B7F907 /* ViewControllerTest.swift in Sources */,
 				AA167E152109D04200DD11B2 /* TableViewController.swift in Sources */,
 				AAC5811A2182CEC60074653D /* Student.swift in Sources */,
-				AA41388D2159E2D600082D90 /* FCM.swift in Sources */,
 				AA7837E421115CE50023AB9F /* GetWeatherService.swift in Sources */,
 				AA167E022109D03200DD11B2 /* UIView+Ex.swift in Sources */,
 				AA93B6A32122BA9D00863204 /* Date+Ex.swift in Sources */,
 				AA7837D32111598A0023AB9F /* ErrorInfo.swift in Sources */,
 				AA829FA5217F1202007F889A /* PaddingLabel.swift in Sources */,
+				AA6765422186E1F0002CACF4 /* PushNotificationService.swift in Sources */,
+				AA6765432186E1F0002CACF4 /* FCM.swift in Sources */,
 				AA7837E221115C380023AB9F /* UIApplication+Ex.swift in Sources */,
 				AA829FA3217F11C1007F889A /* NSMutableAttributedString+Ex.swift in Sources */,
 				AA7837E621115D2D0023AB9F /* TableViewModel.swift in Sources */,

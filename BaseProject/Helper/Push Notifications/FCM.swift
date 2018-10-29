@@ -13,7 +13,7 @@ class FCM: NSObject {
     static let shared = FCM()
     
     var fcmToken = ""
-
+    
     func setup() {
         if let filePath = Bundle.main.path(forResource: "GoogleService-Info", ofType: "plist") {
             if let firebaseOption = FirebaseOptions(contentsOfFile: filePath) {
@@ -21,7 +21,7 @@ class FCM: NSObject {
             }
         }
     }
-
+    
     func tokenRefreshNotificaiton() {
         guard let refreshedToken = InstanceID.instanceID().token() else {
             return
@@ -29,7 +29,7 @@ class FCM: NSObject {
         print("==================================")
         print("FCMToken: \(refreshedToken)")
         print("==================================")
-    
+        
         self.fcmToken = refreshedToken
         Messaging.messaging().shouldEstablishDirectChannel = true
     }
