@@ -23,14 +23,17 @@ class FCM: NSObject {
     }
     
     func tokenRefreshNotificaiton() {
-        guard let refreshedToken = InstanceID.instanceID().token() else {
-            return
+        InstanceID.instanceID().instanceID { (result, error) in
+            if let error = error {
+                print("Error fetching remote instange ID: \(error)")
+            } else if let result = result {
+                print("==================================")
+                print("FCMToken: \(result.token)")
+                print("==================================")
+                
+                self.fcmToken = result.token
+                Messaging.messaging().shouldEstablishDirectChannel = true
+            }
         }
-        print("==================================")
-        print("FCMToken: \(refreshedToken)")
-        print("==================================")
-        
-        self.fcmToken = refreshedToken
-        Messaging.messaging().shouldEstablishDirectChannel = true
     }
 }

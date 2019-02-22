@@ -52,8 +52,9 @@ class WindowManager: NSObject {
             self.progressWindow.windowLevel = WindowManager.currentWindowLevel() + 0.1
             self.progressWindow.isHidden = false
             let size = CGSize(width: 30, height: 30)
+            
             let color = UIColor(hex: 0x720999)
-            self.progressController.view.backgroundColor = .red
+//            self.progressController.view.backgroundColor = .red
             self.progressController.startAnimating(size,
                                                    message: "",
                                                    type: .ballPulse,

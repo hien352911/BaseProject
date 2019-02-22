@@ -16,7 +16,13 @@ class BaseTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         removeBackButtonTitle()
+        setupUI()
+        setupObservable()
     }
+    
+    func setupUI() {}
+    
+    func setupObservable() {}
     
     deinit {
         print(NSStringFromClass(self.classForCoder) + "." + #function)

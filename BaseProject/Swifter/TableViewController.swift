@@ -18,9 +18,11 @@ class TableViewController: BaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        WindowManager.shared.showProgressView()
-        addSideMenu()
-        getStudents(isLoadmore: false)
+//        addSideMenu()
+        getStudents(isLoadmore: false, completion: { [unowned self] in
+            print("Dealloc")
+            self.reloadTableView()
+        })
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Current Location", style: .plain, target: self, action: #selector(getCurrentLocation))
     }
     
@@ -35,7 +37,8 @@ class TableViewController: BaseTableViewController {
         LocationManager.shared.startSingleLocationRequest()
     }
     
-    func addSideMenu() {
+    // MARK: - Private Methods
+    private func addSideMenu() {
         if let img = UIImage.init(named: "menu") {
             addLeftBarButtonWithImage(buttonImage: img, tintColor: UIColor.blue)
         }
@@ -52,26 +55,63 @@ class TableViewController: BaseTableViewController {
         }
     }
     
-    func setupUI() {
-        tableView.es.addPullToRefresh { [weak self] in
-            self?.getStudents(isLoadmore: false)
-            self?.tableView.es.stopPullToRefresh()
-        }
-        tableView.es.addInfiniteScrolling { [weak self] in
-            self?.getStudents(isLoadmore: true)
-            self?.tableView.es.stopLoadingMore()
-        }
+    // MARK: - Base setup tableView
+    override func setupUI() {
+        setupRefreshControl()
+        setupLoadMore()
+        
         tableView.register(nibWithCellClass: TableViewCell.self)
         tableView.rowHeight = 60
         tableView.tableFooterView = UIView()
     }
     
-    func getStudents(isLoadmore: Bool) {
-        viewModel.getWeathers(isLoadmore: isLoadmore) { [weak self] in
-            self?.tableView.reloadData()
+    private func setupRefreshControl() {
+        let refreshControl = UIRefreshControl()
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.tintColor = UIColor.blue
+        refreshControl.addTarget(self, action: #selector(refresh(_:)), for: .valueChanged)
+        tableView.refreshControl = refreshControl
+    }
+    
+    @objc func refresh(_ sender: UIRefreshControl) {
+        getStudents(isLoadmore: false) { [weak self] in
+            sender.endRefreshing()
+            self?.reloadTableView()
         }
     }
     
+    private func setupLoadMore() {
+        tableView.estimatedRowHeight = 0
+        let footer = ESRefreshFooterAnimator(frame: .zero)
+//        footer.loadingMoreDescription = ""
+        tableView.es.addInfiniteScrolling(animator: footer) { [weak self] in
+            self?.getStudents(isLoadmore: true, completion: {
+                self?.tableView.es.stopLoadingMore()
+                self?.reloadTableView()
+            })
+        }
+    }
+    
+    private func reloadTableView() {
+        let lastOffset = tableView?.contentOffset ?? .zero
+        tableView?.reloadData()
+        tableView?.contentOffset = lastOffset
+    }
+    
+    private func getStudents(isLoadmore: Bool, completion: @escaping (() -> Void)) {
+//        WindowManager.shared.showProgressView()
+        viewModel.getWeathers(isLoadmore: isLoadmore) {
+//            WindowManager.shared.hideProgressView()
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5) {
+                completion()
+            }
+//            DispatchQueue.main.async {
+//                completion()
+//            }
+        }
+    }
+    
+    // MARK: - Configure Cell
     private func scoopCellAtIndexPath(indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withClass: TableViewCell.self, for: indexPath)
         
@@ -104,5 +144,10 @@ extension TableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = StudentViewController.make()
+        navigationController?.pushViewController(vc)
     }
 }

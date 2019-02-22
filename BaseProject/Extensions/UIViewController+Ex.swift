@@ -18,10 +18,22 @@ extension UIViewController {
 }
 
 extension UIViewController {
-    func presentTransperant(_ viewControllerToPresent: UIViewController, animated: Bool, completion: (() -> Void)? = nil) {
-        viewControllerToPresent.modalPresentationStyle = .overCurrentContext
-        present(viewControllerToPresent, animated: animated, completion: completion)
-    }
+	func presentTransperant(_ viewControllerToPresent: UIViewController, animated: Bool, completion: (() -> Void)? = nil) {
+		viewControllerToPresent.modalPresentationStyle = .overCurrentContext
+		viewControllerToPresent.view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3)
+		
+		let overlayView = UIView()
+		overlayView.frame = viewControllerToPresent.view.frame
+		overlayView.backgroundColor = .clear
+		overlayView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dismissViewController)))
+		viewControllerToPresent.view.insertSubview(overlayView, at: 0)
+		
+		present(viewControllerToPresent, animated: animated, completion: completion)
+	}
+	
+	@objc func dismissViewController() {
+		dismiss(animated: false)
+	}
 }
 
 extension UIViewController {

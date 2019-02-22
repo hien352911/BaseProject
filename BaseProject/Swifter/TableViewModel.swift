@@ -31,7 +31,9 @@ class TableViewModel {
                                         retryCount: 1)
         service.doExecute { [weak self] (response, error) in
             guard let `self` = self else { return }
-            if let response = response as? [Student] {
+            if let error = error {
+                UIViewController().showAlert(title: error.description, message: nil)
+            } else if let response = response as? [Student] {
                 if !isLoadmore {
                     self.students = response
                 } else {
@@ -41,8 +43,8 @@ class TableViewModel {
                         }
                     }
                 }
+                completion()
             }
-            completion()
         }
     }
     

@@ -13,10 +13,16 @@ class BaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         removeBackButtonTitle()
+        setupUI()
+        setupObservable()
     }
     
     @objc open override func leftAction() {
         
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     func setupUI() {}

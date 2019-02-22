@@ -45,11 +45,15 @@
 		AA829FA3217F11C1007F889A /* NSMutableAttributedString+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA829FA2217F11C1007F889A /* NSMutableAttributedString+Ex.swift */; };
 		AA829FA5217F1202007F889A /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA829FA4217F1202007F889A /* PaddingLabel.swift */; };
 		AA93B6A32122BA9D00863204 /* Date+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA93B6A22122BA9D00863204 /* Date+Ex.swift */; };
+		AA97CF8721DF750D00AB6050 /* XibViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA97CF8621DF750D00AB6050 /* XibViewController.swift */; };
+		AA97CF8A21DF75A800AB6050 /* StudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA97CF8821DF75A800AB6050 /* StudentViewController.swift */; };
+		AA97CF8B21DF75A800AB6050 /* StudentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA97CF8921DF75A800AB6050 /* StudentViewController.xib */; };
 		AA9FBFDE214BA95B006001BE /* TSAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FBFDD214BA95B006001BE /* TSAsset.swift */; };
 		AAA8A68F2119AB9B00B7F907 /* ViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA8A68E2119AB9B00B7F907 /* ViewControllerTest.swift */; };
 		AAC5811A2182CEC60074653D /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC581192182CEC60074653D /* Student.swift */; };
 		AAD676AF2179BCBA00031BDA /* UIImage+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD676AE2179BCBA00031BDA /* UIImage+Ex.swift */; };
 		AADE7C11216C6C91009B3E7A /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADE7C10216C6C91009B3E7A /* LocationManager.swift */; };
+		AADFBC29219A898300577AE9 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADFBC28219A898300577AE9 /* BaseNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,11 +100,15 @@
 		AA829FA2217F11C1007F889A /* NSMutableAttributedString+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+Ex.swift"; sourceTree = "<group>"; };
 		AA829FA4217F1202007F889A /* PaddingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		AA93B6A22122BA9D00863204 /* Date+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ex.swift"; sourceTree = "<group>"; };
+		AA97CF8621DF750D00AB6050 /* XibViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibViewController.swift; sourceTree = "<group>"; };
+		AA97CF8821DF75A800AB6050 /* StudentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentViewController.swift; sourceTree = "<group>"; };
+		AA97CF8921DF75A800AB6050 /* StudentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudentViewController.xib; sourceTree = "<group>"; };
 		AA9FBFDD214BA95B006001BE /* TSAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSAsset.swift; sourceTree = "<group>"; };
 		AAA8A68E2119AB9B00B7F907 /* ViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTest.swift; sourceTree = "<group>"; };
 		AAC581192182CEC60074653D /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		AAD676AE2179BCBA00031BDA /* UIImage+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Ex.swift"; sourceTree = "<group>"; };
 		AADE7C10216C6C91009B3E7A /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		AADFBC28219A898300577AE9 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		D703586E9905C592750194A9 /* Pods-BaseProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaseProject/Pods-BaseProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -154,16 +162,14 @@
 		AA167DE62109CFD900DD11B2 /* BaseProject */ = {
 			isa = PBXGroup;
 			children = (
-				AA4138E6215A3CA500082D90 /* SideMenu */,
 				AA7837B32111598A0023AB9F /* Api */,
-				AA167E062109D03800DD11B2 /* Reachability */,
 				AA7837E7211160090023AB9F /* Helper */,
 				AA167DFD2109D03100DD11B2 /* Extensions */,
+				AA4138E6215A3CA500082D90 /* SideMenu */,
+				AA167E062109D03800DD11B2 /* Reachability */,
 				AA167E0B2109D04200DD11B2 /* Swifter */,
 				AA167DE72109CFD900DD11B2 /* AppDelegate.swift */,
-				AA167E182109D05C00DD11B2 /* BaseViewController.swift */,
-				AA4138E4215A3C6C00082D90 /* BaseTableViewController.swift */,
-				AAA8A68E2119AB9B00B7F907 /* ViewControllerTest.swift */,
+				AAC6A4072187E91E0046889F /* ViewControllers */,
 				AA167E162109D04D00DD11B2 /* Main.storyboard */,
 				AA167DF92109CFEB00DD11B2 /* BaseProject-Bridging-Header.h */,
 				AA167DEE2109CFDC00DD11B2 /* Assets.xcassets */,
@@ -205,6 +211,9 @@
 				AA167E102109D04200DD11B2 /* TableViewController.swift */,
 				AA7837E521115D2D0023AB9F /* TableViewModel.swift */,
 				AAC581192182CEC60074653D /* Student.swift */,
+				AA97CF8621DF750D00AB6050 /* XibViewController.swift */,
+				AA97CF8821DF75A800AB6050 /* StudentViewController.swift */,
+				AA97CF8921DF75A800AB6050 /* StudentViewController.xib */,
 			);
 			path = Swifter;
 			sourceTree = "<group>";
@@ -299,6 +308,25 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		AAC6A4072187E91E0046889F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				AAC6A4082187E9310046889F /* Base */,
+				AAA8A68E2119AB9B00B7F907 /* ViewControllerTest.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		AAC6A4082187E9310046889F /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				AA167E182109D05C00DD11B2 /* BaseViewController.swift */,
+				AA4138E4215A3C6C00082D90 /* BaseTableViewController.swift */,
+				AADFBC28219A898300577AE9 /* BaseNavigationController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -367,6 +395,7 @@
 			files = (
 				AA167E112109D04200DD11B2 /* TableHeaderView.xib in Resources */,
 				AA167E142109D04200DD11B2 /* TableViewCell.xib in Resources */,
+				AA97CF8B21DF75A800AB6050 /* StudentViewController.xib in Resources */,
 				AA167DF22109CFDC00DD11B2 /* LaunchScreen.storyboard in Resources */,
 				AA167E172109D04D00DD11B2 /* Main.storyboard in Resources */,
 				AA167DEF2109CFDC00DD11B2 /* Assets.xcassets in Resources */,
@@ -458,7 +487,9 @@
 				AA4138E8215A3CBA00082D90 /* LeftMenuTableViewController.swift in Sources */,
 				AA7837D02111598A0023AB9F /* RequestBodyData.swift in Sources */,
 				AA167E032109D03200DD11B2 /* UIViewController+Ex.swift in Sources */,
+				AA97CF8721DF750D00AB6050 /* XibViewController.swift in Sources */,
 				AADE7C11216C6C91009B3E7A /* LocationManager.swift in Sources */,
+				AADFBC29219A898300577AE9 /* BaseNavigationController.swift in Sources */,
 				AA167E092109D03900DD11B2 /* Utilities.swift in Sources */,
 				AA7837D22111598A0023AB9F /* Error+Extension.swift in Sources */,
 				AA167E042109D03200DD11B2 /* NSObject+Ex.swift in Sources */,
@@ -471,6 +502,7 @@
 				AA167E132109D04200DD11B2 /* TableViewCell.swift in Sources */,
 				AAA8A68F2119AB9B00B7F907 /* ViewControllerTest.swift in Sources */,
 				AA167E152109D04200DD11B2 /* TableViewController.swift in Sources */,
+				AA97CF8A21DF75A800AB6050 /* StudentViewController.swift in Sources */,
 				AAC5811A2182CEC60074653D /* Student.swift in Sources */,
 				AA7837E421115CE50023AB9F /* GetWeatherService.swift in Sources */,
 				AA167E022109D03200DD11B2 /* UIView+Ex.swift in Sources */,
@@ -630,7 +662,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z7YWS97UKQ;
 				INFOPLIST_FILE = BaseProject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -653,7 +685,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z7YWS97UKQ;
 				INFOPLIST_FILE = BaseProject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

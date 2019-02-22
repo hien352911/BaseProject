@@ -95,39 +95,5 @@ extension PushNotificationService: UNUserNotificationCenterDelegate {
         let userInfo = response.notification.request.content.userInfo
         self.didReceiveRemoteNotification(userInfo: userInfo)
         completionHandler()
-        
-        guard let roomID = userInfo["connection-id"] as? String,
-            var otherFullname = userInfo["notification-message"] as? String else {
-                return
-        }
-        let arrays = otherFullname.components(separatedBy: "sent")
-        otherFullname = arrays.first ?? ""
-        
-        FirebaseConstants.refs
-            .databaseConnections
-            .child(roomID)
-            .child("messages")
-            .queryLimited(toLast: UInt(1))
-            .observe(.childAdded, with: { [weak self] snapshot in
-                guard let mgsDict = snapshot.value as? [String: Any],
-                    let username = mgsDict["author"] as? String
-                    else {
-                        return
-                }
-                
-                let otherUser = ZakatifierInfo()
-                otherUser.username = username
-                otherUser.fullname = otherFullname
-                guard let user = UserManager.shared.currentUser,
-                    let vc = UIStoryboard.message().instantiateViewController(withIdentifier: "MessageViewController") as? MessageViewController else {
-                        return
-                }
-                let chatPresenter = MessagePresenter(view: vc, user: user, otherUser: otherUser, queryLimit: 50)
-                chatPresenter.roomID = roomID
-                vc.presenter = chatPresenter
-                UIViewController.topMostViewController()?.navigationController?.pushViewController(vc, animated: true)
-            })
-        
-        
     }
 }
