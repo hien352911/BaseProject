@@ -171,3 +171,20 @@ extension UIViewController {
         return root
     }
 }
+
+// MARK: - Helper add UIView load from nib
+extension UIViewController {
+	func addSubview(
+		_ subview: UIView,
+		constrainedTo anchorsView: UIView
+		) {
+		anchorsView.addSubview(subview)
+		subview.translatesAutoresizingMaskIntoConstraints = false
+		NSLayoutConstraint.activate([
+			subview.centerXAnchor.constraint(equalTo: anchorsView.centerXAnchor),
+			subview.centerYAnchor.constraint(equalTo: anchorsView.centerYAnchor),
+			subview.widthAnchor.constraint(equalTo: anchorsView.widthAnchor),
+			subview.heightAnchor.constraint(equalTo: anchorsView.heightAnchor)
+			])
+	}
+}
