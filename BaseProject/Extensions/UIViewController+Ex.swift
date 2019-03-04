@@ -18,7 +18,7 @@ extension UIViewController {
 }
 
 extension UIViewController {
-	func presentTransperant(_ viewControllerToPresent: UIViewController, animated: Bool, completion: (() -> Void)? = nil) {
+	func presentTransperant(_ viewControllerToPresent: UIViewController, animated: Bool = false, completion: (() -> Void)? = nil) {
 		viewControllerToPresent.modalPresentationStyle = .overCurrentContext
 		viewControllerToPresent.view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3)
 		
@@ -34,6 +34,13 @@ extension UIViewController {
 	@objc func dismissViewController() {
 		dismiss(animated: false)
 	}
+    
+    func addBlurView() {
+        let blurEffect = UIBlurEffect(style: .dark)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = view.bounds
+        view.insertSubview(blurEffectView, at: 0)
+    }
 }
 
 extension UIViewController {
