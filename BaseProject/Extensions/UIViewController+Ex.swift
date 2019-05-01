@@ -30,6 +30,22 @@ extension UIViewController {
 		
 		present(viewControllerToPresent, animated: animated, completion: completion)
 	}
+    
+    func presentTransperantCustom(_ viewControllerToPresent: UIViewController, animated flag: Bool = true, completion: (() -> Void)? = nil) {
+        
+        let slideInPresentationDelegate = SlideInPresentationDelegate()
+        viewControllerToPresent.transitioningDelegate = slideInPresentationDelegate
+        viewControllerToPresent.modalPresentationStyle = .custom
+        viewControllerToPresent.view.backgroundColor = .clear
+        
+        let overlayView = UIView()
+        overlayView.frame = viewControllerToPresent.view.frame
+        overlayView.backgroundColor = .clear
+        overlayView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dismissViewController)))
+        viewControllerToPresent.view.insertSubview(overlayView, at: 0)
+        
+        present(viewControllerToPresent, animated: flag, completion: completion)
+    }
 	
 	@objc func dismissViewController() {
 		dismiss(animated: false)
