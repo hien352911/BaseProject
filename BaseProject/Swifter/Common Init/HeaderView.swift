@@ -17,6 +17,11 @@ class HeaderView: UIView {
 		commonInit()
 	}
 	
+	override init(frame: CGRect) {
+		super.init(frame: frame)
+		commonInit()
+	}
+	
 	private func commonInit() {
 		Bundle.main.loadNibNamed("HeaderView", owner: self)
 		addSubview(contentView)
