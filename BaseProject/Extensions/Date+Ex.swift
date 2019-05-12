@@ -80,4 +80,11 @@ extension Date {
             return String(year) + " y"
         }
     }
+	
+	// 40 => "40", 140 => "2:20"
+	public func stringFrom(_ minutes: Int) -> String {
+		let formatter = DateComponentsFormatter()
+		let interval = TimeInterval(minutes)
+		return formatter.string(from: interval) ?? ""
+	}
 }
