@@ -12,7 +12,7 @@ import Reachability
 class ReachabilityViewController: UIViewController {
     // Phải khai báo reachability ở ngoài func, ko để trong func được
     let reachability = Reachability()!
-
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
 

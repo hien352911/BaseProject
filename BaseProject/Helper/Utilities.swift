@@ -9,6 +9,7 @@
 import Foundation
 import Reachability
 import Photos
+import AudioToolbox
 
 class Utilities {
     static let shared = Utilities()
@@ -45,5 +46,13 @@ class Utilities {
     class var documentPath: String? {
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first
         return paths
+    }
+    
+    class func makeHapticFeedback() {
+        if Device.isIphone320width() {
+            AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+        } else {
+            AudioServicesPlaySystemSound(1521)
+        }
     }
 }

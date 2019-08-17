@@ -211,3 +211,13 @@ extension UIViewController {
 			])
 	}
 }
+
+protocol StoryboardLoadable {}
+
+extension StoryboardLoadable where Self: UIViewController {
+    static func loadStoryboard(_ name: StoryboardType) -> Self {
+        return UIStoryboard(name: "\(name.rawValue)", bundle: nil).instantiateViewController(withIdentifier: "\(self)") as! Self
+    }
+}
+
+extension UIViewController: StoryboardLoadable {}
