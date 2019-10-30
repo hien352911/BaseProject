@@ -24,6 +24,13 @@ class TableViewController: BaseTableViewController {
             self.reloadTableView()
         })
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Current Location", style: .plain, target: self, action: #selector(getCurrentLocation))
+        
+        Notification.Name.acceptButton.onPost { [weak self] _ in
+          
+        }
+        Notification.Name.rejectButton.onPost { [weak self] _ in
+          
+        }
     }
     
     // MARK: - Override Methods
