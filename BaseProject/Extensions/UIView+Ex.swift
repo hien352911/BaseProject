@@ -30,4 +30,8 @@ extension UIView {
         layer.cornerRadius = corner
         layer.masksToBounds = true
     }
+    
+    class var identifier: String {
+        return String(describing: self)
+    }
 }

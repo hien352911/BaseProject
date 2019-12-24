@@ -10,8 +10,4 @@ import Foundation
 
 enum StoryboardType: String {
     case main = "Main"
-    
-    var fileType: String {
-        return rawValue.capitalized
-    }
 }

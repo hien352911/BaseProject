@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		687AE8B3EF24F143EFA01231 /* Pods_BaseProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14947D2DC69346266A3E09F4 /* Pods_BaseProject.framework */; };
+		8B155C7F23B1E46E0060A050 /* UITableViewCellExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B155C7E23B1E46E0060A050 /* UITableViewCellExtensions.swift */; };
 		8B6A0CE72276C93100A19600 /* SlideInPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6A0CE62276C93100A19600 /* SlideInPresentationController.swift */; };
 		8B6A0CE92276C94300A19600 /* SlideInPresentationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6A0CE82276C94300A19600 /* SlideInPresentationDelegate.swift */; };
+		8B82077B237445480069306E /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B82077A237445480069306E /* Defaults.swift */; };
 		8BC69CF322798CB90098D470 /* PhotoWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC69CF222798CB90098D470 /* PhotoWriter.swift */; };
 		8BD0F0DB227FC7A10060F42B /* StoryboardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD0F0DA227FC7A10060F42B /* StoryboardType.swift */; };
 		8BD3BEBC230D1A01008B90AF /* NotificationNameExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD3BEBB230D1A01008B90AF /* NotificationNameExtensions.swift */; };
@@ -66,8 +68,10 @@
 /* Begin PBXFileReference section */
 		14947D2DC69346266A3E09F4 /* Pods_BaseProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaseProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E24C977CAB627769E9F55C5 /* Pods-BaseProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BaseProject/Pods-BaseProject.debug.xcconfig"; sourceTree = "<group>"; };
+		8B155C7E23B1E46E0060A050 /* UITableViewCellExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtensions.swift; sourceTree = "<group>"; };
 		8B6A0CE62276C93100A19600 /* SlideInPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInPresentationController.swift; sourceTree = "<group>"; };
 		8B6A0CE82276C94300A19600 /* SlideInPresentationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInPresentationDelegate.swift; sourceTree = "<group>"; };
+		8B82077A237445480069306E /* Defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		8BC69CF222798CB90098D470 /* PhotoWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoWriter.swift; sourceTree = "<group>"; };
 		8BD0F0DA227FC7A10060F42B /* StoryboardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardType.swift; sourceTree = "<group>"; };
 		8BD3BEBB230D1A01008B90AF /* NotificationNameExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationNameExtensions.swift; sourceTree = "<group>"; };
@@ -234,6 +238,7 @@
 				AA829FA2217F11C1007F889A /* NSMutableAttributedString+Ex.swift */,
 				AA167E002109D03100DD11B2 /* NSObject+Ex.swift */,
 				8BD3BEBB230D1A01008B90AF /* NotificationNameExtensions.swift */,
+				8B155C7E23B1E46E0060A050 /* UITableViewCellExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -324,6 +329,7 @@
 			children = (
 				AA67653F2186E1F0002CACF4 /* Push Notifications */,
 				AA167E072109D03800DD11B2 /* Utilities.swift */,
+				8B82077A237445480069306E /* Defaults.swift */,
 				AA7837B1211155E60023AB9F /* WindowManager.swift */,
 				AA9FBFDD214BA95B006001BE /* TSAsset.swift */,
 				AADE7C10216C6C91009B3E7A /* LocationManager.swift */,
@@ -539,10 +545,12 @@
 				AADFBC29219A898300577AE9 /* BaseNavigationController.swift in Sources */,
 				AA167E092109D03900DD11B2 /* Utilities.swift in Sources */,
 				AA7837D22111598A0023AB9F /* Error+Extension.swift in Sources */,
+				8B155C7F23B1E46E0060A050 /* UITableViewCellExtensions.swift in Sources */,
 				8BD3BEBC230D1A01008B90AF /* NotificationNameExtensions.swift in Sources */,
 				8B6A0CE72276C93100A19600 /* SlideInPresentationController.swift in Sources */,
 				AA167E042109D03200DD11B2 /* NSObject+Ex.swift in Sources */,
 				AA7837CF2111598A0023AB9F /* RequestFileBodyData.swift in Sources */,
+				8B82077B237445480069306E /* Defaults.swift in Sources */,
 				AA7837D52111598A0023AB9F /* Encoding.swift in Sources */,
 				AA167E192109D05C00DD11B2 /* BaseViewController.swift in Sources */,
 				AAD676AF2179BCBA00031BDA /* UIImage+Ex.swift in Sources */,

@@ -16,4 +16,12 @@ extension TableViewCell {
     func updateWithWeather(_ weather: String) {
         label.text = weather
     }
+    
+    class func cellInstance() -> TableViewCell {
+        let stateCellNibName = TableViewCell.identifier
+        guard let cell = UITableViewCell.cellInstance(stateCellNibName) as? TableViewCell else {
+            return TableViewCell()
+        }
+        return cell
+    }
 }
