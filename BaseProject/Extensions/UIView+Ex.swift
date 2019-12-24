@@ -16,10 +16,10 @@ import UIKit
  */
 
 extension UIView {
-    func roundView() {
-        let minSize = min(bounds.width, bounds.height)
-        layer.cornerRadius = minSize / 2
-        layer.masksToBounds = true
+    func rounded() {
+        self.layer.masksToBounds = true
+        self.layer.cornerRadius = min(self.bounds.width, self.bounds.height) / 2
+        self.layer.masksToBounds = true
     }
     
     func border(width: CGFloat, color: UIColor) {
